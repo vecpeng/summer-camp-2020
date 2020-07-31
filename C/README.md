@@ -210,3 +210,17 @@
 * 19:10-21:00 继续学习express框架
 
 2.郁闷的一天，服务器部署了一下午还没弄好，唯一的收获是见识了各种4xx,5xx的http状态码
+
+
+
+7.31
+
+1.
+
+* 14:00-18:00模仿[TODOMVC](http://todomvc.com/examples/vanilla-es6/)  先用原生再用Vue（基础太差，遇到了几个小bug解决了好久
+* 18:00-18:40吃饭
+* 14:00-18:00模仿[TODOMVC](http://todomvc.com/examples/vanilla-es6/)
+
+2.
+
+今天把服务器部署上去了 发现是端口没配置好。然后写小demo
