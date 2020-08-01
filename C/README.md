@@ -224,3 +224,17 @@
 2.
 
 今天把服务器部署上去了 发现是端口没配置好。然后写小demo
+
+
+
+8.1
+
+1.
+
+* 14:00-18:00继续模仿[TODOMVC](http://todomvc.com/examples/vanilla-es6/)  
+* 18:00-18:40吃饭
+* 14:00-18:00继续模仿[TODOMVC](http://todomvc.com/examples/vanilla-es6/)
+
+
+
+2.今天感受到了Vue的强大，真的让我少写了很多代码

@@ -1,174 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .body {
-            background: #f5f5f5;
-        }
+      .body {
+        background: #f5f5f5;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        .todo h1 {
-            font-size: 100px;
-            font-weight: 400;
-            text-align: center;
-            color: rgba(175, 47, 47, 0.15);
-        }
+      .todo h1 {
+        font-size: 100px;
+        font-weight: 400;
+        text-align: center;
+        color: rgba(175, 47, 47, 0.15);
+      }
 
-        .todo-list {
-            list-style: none;
-        }
+      .todo-list {
+        list-style: none;
+      }
 
-        .todo-list li {
-            position: relative;
-            font-size: 24px;
-            border-bottom: 1px solid #ededed;
-        }
+      .todo-list li {
+        position: relative;
+        font-size: 24px;
+        border-bottom: 1px solid #ededed;
+      }
 
-        .todo-list li:last-child {
-            border-bottom: none;
-        }
+      .todo-list li:last-child {
+        border-bottom: none;
+      }
 
-        .todo-icon {
-            font-size: 28px;
-            color: #e6e6e6;
-            width: 34px;
-            height: 60px;
-            transform: rotate(90deg);
-            display: inline-block;
-            position: relative;
-            bottom: 2px;
-            margin: 0 10px;
-        }
+      .todo-icon {
+        font-size: 28px;
+        color: #e6e6e6;
+        width: 34px;
+        height: 60px;
+        transform: rotate(90deg);
+        display: inline-block;
+        position: relative;
+        bottom: 2px;
+        margin: 0 10px;
+      }
 
-        .todo .todo-container {
-            margin: auto;
-        }
+      .todo .todo-container {
+        margin: auto;
+      }
 
-        .todo #todo-input {
-            width: 300px;
-            height: 60px;
-            background-color: #fff;
-            border: none;
-            outline: none;
-            line-height: 40px;
-            display: inline-block;
-            font-size: 24px;
-        }
+      .todo #todo-input {
+        width: 300px;
+        height: 60px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        line-height: 40px;
+        display: inline-block;
+        font-size: 24px;
+      }
 
-        .todo .todo-input-container {
-            box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
-            height: 60px;
-            width: 550px;
-            margin: auto;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-        }
+      .todo .todo-input-container {
+        box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+        height: 60px;
+        width: 550px;
+        margin: auto;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      }
 
-        .todo-container input::placeholder {
-            font-style: italic;
-            font-weight: 400;
-            color: #e6e6e6;
-            font-size: 24px;
-        }
+      .todo-container input::placeholder {
+        font-style: italic;
+        font-weight: 400;
+        color: #e6e6e6;
+        font-size: 24px;
+      }
 
-        .todo-list {
-            width: 550px;
-            margin: auto;
-        }
+      .todo-list {
+        width: 550px;
+        margin: auto;
+      }
 
-        .todo-list .todo-item {
-            width: 550px;
-            height: 60px;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-            line-height: 60px;
-        }
+      .todo-list .todo-item {
+        width: 550px;
+        height: 60px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        line-height: 60px;
+      }
 
-        .todo-list .todo-circle {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            border: 1px solid #e0dcdc;
-            cursor: pointer;
-            display: inline-block;
-            margin: 16px 10px;
-            vertical-align: -30%;
-        }
+      .todo-list li .todo-circle {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid #e0dcdc;
+        cursor: pointer;
+        display: inline-block;
+        margin: 16px 10px;
+        vertical-align: -30%;
+      }
 
-        .todo-list .todo-delete {
-            position: absolute;
-            right: 20px;
-            bottom: 4px;
-            font-size: 30px;
-            color: rgb(121, 48, 48)
-        }
+      .todo-list .todo-delete {
+        position: absolute;
+        right: 20px;
+        bottom: 4px;
+        font-size: 30px;
+        color: rgb(121, 48, 48);
+      }
+
+      .todo-container .todo-bottom {
+        width: 550px;
+        height: 40px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        line-height: 40px;
+        margin: auto;
+        position: relative;
+      }
+
+      .todo-bottom::after {
+        content: " ";
+        position: absolute;
+        left: 5px;
+        bottom: -10px;
+        width: 540px;
+        height: 5px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,
+          0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6,
+          0 17px 2px -6px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        margin: auto;
+        z-index: -2;
+      }
+
+      .todo-bottom::before {
+        content: " ";
+        position: absolute;
+        left: 1px;
+        bottom: -6px;
+        width: 548px;
+        height: 5px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,
+          0 9px 1px -3px rgba(204, 187, 187, 0.2), 0 16px 0 -6px #f6f6f6,
+          0 17px 2px -6px rgba(231, 215, 215, 0.2);
+        background-color: #fff;
+        margin: auto;
+        z-index: -1;
+      }
+
+      .todo-bottom > span {
+        color: #999999;
+        font-size: 14px;
+      }
+
+      .todo-bottom span:nth-child(1) {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .todo-bottom span:nth-child(2) {
+        margin-left: 80px;
+        margin-right: 16px;
+      }
+
+      .todo-bottom span:nth-child(4) {
+        margin-left: 16px;
+        margin-right: 80px;
+      }
+
+      .todo-bottom .bottom-click {
+        border: 1px solid rgba(175, 47, 47, 0.2);
+      }
+
+      .circle-choose {
+        border-color: rgb(128, 189, 128);
+      }
+
+      .footer {
+        margin: 65px auto 0;
+        color: #bfbfbf;
+        font-size: 10px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        text-align: center;
+      }
+
+      .footer p {
+        line-height: 1;
+      }
+
+      .footer a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: 400;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="todo">
-        <h1>todos</h1>
+      <h1>todos</h1>
 
-        <div class="todo-container">
-            <div class="todo-input-container">
-                <div class="todo-icon">></div>
-                <input id="todo-input" type="text" placeholder="What needs to be done?" />
-            </div>
-            <ul class="todo-list">
-            </ul>
+      <div class="todo-container">
+        <div class="todo-input-container">
+          <div class="todo-icon">></div>
+          <input
+            id="todo-input"
+            type="text"
+            placeholder="What needs to be done?"
+          />
         </div>
+        <ul class="todo-list"></ul>
+        <div class="todo-bottom">
+          <span>0 item left</span>
+          <span id="all">All</span>
+          <span id="active">Active</span>
+          <span id="completed">Completed</span>
+          <span id="clear-completed">Clear completed</span>
+        </div>
+      </div>
     </div>
 
+    <footer class="footer">
+      <p>Double-click to edit a todo</p>
+      <p>Written by <a href="http://twitter.com/lukeed05">Luke Edwards</a></p>
+      <p>
+        Refactored by <a href="https://github.com/xorgy">Aaron Muir Hamilton</a>
+      </p>
+      <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+
     <script>
-        let todoList = document.getElementsByClassName('todo-list')
-        let todoInput = document.getElementById('todo-input')
-        let n = 0
+      let todoList = document.getElementsByClassName("todo-list");
+      let todoInput = document.getElementById("todo-input");
+      let all = document.getElementById("all");
+      let active = document.getElementById("active");
+      let completed = document.getElementById("completed");
+      let clearCompleted = document.getElementById("clear-completed");
+      let n = 0;
 
-        function deleteParentNode(node, className) {
-            for (let i = 0; i < node.length; i++) {
-                    node[i].onclick = function () {
-                        console.log(i)
-                        // node[i].parentNode.parentNode.removeChild(node[i].parentNode)
-                        node[i].parentNode.style.display = 'none'
-                    }
-                }
+      function deleteParentNode(node, className) {
+        for (let i = 0; i < node.length; i++) {
+          node[i].onclick = function () {
+            console.log(i);
+            // node[i].parentNode.parentNode.removeChild(node[i].parentNode)
+            node[i].parentNode.style.display = "none";
+            node[i].parentNode.setAttribute("index", 1);
+          };
         }
-        // let circle = document.createElement('span')
-        // let deleteItem = document.createElement('span')
+      }
+      // let circle = document.createElement('span')
+      // let deleteItem = document.createElement('span')
 
-        // circle.className = "todo-circle"
-        // deleteItem.className = "todo-delete"
-        // console.log(circle)
-        // todoItem.appendChild(circle)
-        // todoItem.appendChild(deleteItem)
+      // circle.className = "todo-circle"
+      // deleteItem.className = "todo-delete"
+      // console.log(circle)
+      // todoItem.appendChild(circle)
+      // todoItem.appendChild(deleteItem)
 
-        // console.log(todoItem)
-        // console.log(todoInput)
-        
-        todoInput.addEventListener("keyup", function (event) {
-            if (event.keyCode === 13) {
-                let todoItem = document.createElement('li')
-                todoItem.className = "todo-item"
-                console.log(todoItem)
-                n++
-                todoItem.innerHTML =
-                    `<span class="todo-circle"></span>${todoInput.value}<span class="todo-delete">x</span>`
-                // todoItem.innerText = todoInput.value
-                todoList[0].appendChild(todoItem)
-                todoInput.value = ''
-                let todoDelete = document.getElementsByClassName("todo-delete")
+      // console.log(todoItem)
+      // console.log(todoInput)
 
-              deleteParentNode(todoDelete)
-            }
-        });
+      all.onclick = function () {
+        all.className = "bottom-click";
+        active.className = "";
+        completed.className = "";
+        let todoList = document.getElementsByClassName("todo-item");
+        for (let i = 0; i < todoList.length; i++) {
+          if (todoList[i].getAttribute("index") != 1) {
+            todoList[i].style.display = "";
+          }
+        }
+      };
+      active.onclick = function () {
+        active.className = "bottom-click";
+        all.className = "";
+        completed.className = "";
+        let todoList = document.getElementsByClassName("todo-item");
+        for (let i = 0; i < todoList.length; i++) {
+          if (todoList[i].getAttribute("index") == 0) {
+            todoList[i].style.display = "";
+          } else {
+            console.log(i);
+            todoList[i].style.display = "none";
+          }
+        }
+      };
+      completed.onclick = function () {
+        completed.className = "bottom-click";
+        active.className = "";
+        all.className = "";
+        let todoList = document.getElementsByClassName("todo-item");
+        for (let i = 0; i < todoList.length; i++) {
+          if (todoList[i].getAttribute("index") == 2) {
+            todoList[i].style.display = "";
+          } else {
+            todoList[i].style.display = "none";
+          }
+        }
+      };
+      clearCompleted.onclick = function () {
+        let todoList = document.getElementsByClassName("todo-item");
+        for (let i = 0; i < todoList.length; i++) {
+          if (todoList[i].getAttribute("index") == 2) {
+            todoList[i].style.display = "none";
+            todoList[i].setAttribute("index", 1);
+          }
+        }
+      };
+
+      todoInput.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          let todoItem = document.createElement("li");
+          todoItem.className = "todo-item";
+          todoItem.setAttribute("index", 0);
+          console.log(todoItem);
+          n++;
+          todoItem.innerHTML = `<span class="todo-circle"></span>${todoInput.value}<span class="todo-delete">x</span>`;
+          // todoItem.innerText = todoInput.value
+          todoList[0].appendChild(todoItem);
+          todoInput.value = "";
+          let todoDelete = document.getElementsByClassName("todo-delete");
+          let todoCircle = document.getElementsByClassName("todo-circle");
+          for (let i = 0; i < todoCircle.length; i++) {
+            todoCircle[i].onclick = function () {
+              if (todoCircle[i].parentNode.getAttribute("index") != 2) {
+                todoCircle[i].style.borderColor = "rgb(128, 189, 128)";
+                todoCircle[i].parentNode.style.color = "#d9d9d9";
+                todoCircle[i].parentNode.style.textDecoration = "line-through";
+                todoCircle[i].parentNode.setAttribute("index", 2);
+              } else {
+                todoCircle[i].style.borderColor = "#e0dcdc";
+                todoCircle[i].parentNode.style.color = "";
+                todoCircle[i].parentNode.style.textDecoration = "";
+                todoCircle[i].parentNode.setAttribute("index", 0);
+              }
+            };
+          }
+          deleteParentNode(todoDelete);
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
