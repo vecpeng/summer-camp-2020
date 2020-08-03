@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header-container">
+        <div>爱选修</div>    
+        <span @click="lessonClick" v-bind:class="isLessonActive?'active':'no-active'">选课</span>
+        <span class="my" @click="myClick" v-bind:class="isMyActive?'active':'no-active'">我</span>
+        <img src="../../image/search.png" alt="">
+    </header>
+    <script src="../../vue.js"></script>
+    <script src="./my.js"></script>
+</body>
+</html>

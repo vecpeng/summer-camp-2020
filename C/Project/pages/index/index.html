@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header class="header-container">
+        <div>爱选修</div>    
+        <span @click="lessonClick" v-bind:class="isLessonActive?'active':'no-active'">选课</span>
+        <span class="my" @click="myClick" v-bind:class="isMyActive?'active':'no-active'">我</span>
+        <img src="../../image/search.png" alt="">
+
+        <!-- 选择课程类型 -->
+        <div class="choose-lesson-container">
+        <ul class="choose-lesson">
+            <li @click="chooseLesson(0)">
+                <span >类别</span>
+                <transition name="rotate">
+                    <span class="rotate-triangle" ></span>
+                </transition>
+            </li>
+            <li @click="chooseLesson(1)">
+                <span >时间</span>
+                <transition name="rotate">
+                    <span class="rotate-triangle" ></span>
+                </transition>
+            </li>
+            <li @click="chooseLesson(2)">
+                <span >地点</span>
+                <transition name="rotate">
+                    <span class="rotate-triangle" ></span>
+                </transition>
+            </li>
+            <li @click="chooseLesson(3)">
+                <span>点名方式</span>
+                <transition name="rotate">
+                    <span class="rotate-triangle" ></span>
+                </transition>
+            </li>
+            <li @click="chooseLesson(4)">
+                <span>考核方式</span>
+                <transition name="rotate">
+                    <span class="rotate-triangle" ></span>
+                </transition>
+            </li>
+        </ul>
+    </div>
+        <div class="choices" v-bind:style="{display:choicesDisplay}" v-for="choice in choices" >
+            <span class="choice" @click="choose(index)">{{choice}}</span>
+        </div>
+         <!-- 选择课程类型end-->
+    </header>
+    <main id="main">
+         <!-- 课程信息展示 -->
+         <div class="lessons" v-for="lesson in lessons" >
+             <div class="lesson-item">
+                 <div class="lesson-left">
+                     <span class="lesson-name">{{lesson.name}}</span>
+                     <span class="lesson-teacher">{{lesson.teacher}}</span>
+                     <span class="lesson-type">{{lesson.type}}</span>
+                 </div>
+                 <div class="lesson-right" >
+                     <span v-for="tag in lesson.tags" class="lesson-tag">{{tag}}</span>
+                 </div>
+             </div>
+         </div>
+         <!-- 课程信息展示end -->
+    </main>
+    <script src="../../vue.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

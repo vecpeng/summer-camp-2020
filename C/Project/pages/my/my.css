@@ -1,0 +1,53 @@
+.header-container{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header-container div:nth-child(1){
+    font-size: 5vw;
+    color: #000
+  }
+  
+  .header-container .active{
+      font-size: 5vw;
+      letter-spacing: 0vw;
+    color: #00cca8;
+    margin-left: 21vw;
+    display: inline-block;
+    padding-bottom: 2vw;
+    position: relative;
+  }
+  
+  .header-container .active:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 5vw;
+    height: 1px;
+    background-color: #00cca8;
+  
+  }
+  
+  .header-container .no-active{
+      font-size: 5vw;
+      letter-spacing: 0vw;
+    margin-left: 21vw;
+    color:#b2b2b2;
+    display: inline-block;
+  }
+  
+  .header-container .my{
+    margin-left:30vw;
+  }
+  
+  .header-container img{
+    width: 6vw;
+    height: 6vw;
+    display: inline-block;
+    position: absolute;
+    right: 2vw;
+    top: 7vw;
+  }

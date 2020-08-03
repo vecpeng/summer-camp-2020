@@ -1,0 +1,163 @@
+.header-container{
+  position: relative;
+  overflow: hidden;
+}
+
+.header-container div:nth-child(1){
+  font-size: 5vw;
+  color: #000
+}
+
+.header-container .active{
+	font-size: 5vw;
+	letter-spacing: 0vw;
+  color: #00cca8;
+  margin-left: 21vw;
+  display: inline-block;
+  padding-bottom: 2vw;
+  position: relative;
+}
+
+.header-container .active:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 5vw;
+  height: 1px;
+  background-color: #00cca8;
+
+}
+
+.header-container .no-active{
+	font-size: 5vw;
+	letter-spacing: 0vw;
+  margin-left: 21vw;
+  color:#b2b2b2;
+  display: inline-block;
+}
+
+.header-container .my{
+  margin-left:30vw;
+}
+
+.header-container img{
+  width: 6vw;
+  height: 6vw;
+  display: inline-block;
+  position: absolute;
+  right: 2vw;
+  top: 7vw;
+}
+
+.header-container ul>li{
+  list-style: none;
+  display: inline-block;
+}
+
+.choose-lesson-container{
+  overflow: scroll;
+  width: 100vw
+}
+
+.choose-lesson{
+  margin: 4vw;
+  overflow: scroll;
+  display: flex;
+  justify-content: space-around;
+  width:118vw;
+  height: 5vw;
+  padding: 0
+}
+
+.choose-lesson li{
+  margin: 0 4vw
+}
+
+.choose-lesson .rotate-triangle{
+  width: 1vw;
+  height: 4vw;
+  display: none;
+  overflow: visible;
+  background-color: white;
+  display: inline-block;
+  position: relative; 
+}
+
+.choose-lesson .rotate-triangle::after{
+  position: absolute;
+  content:">";
+  transform: rotate(90deg);
+  left: 0;
+  top: 0;
+  font-weight: 1;
+  color:  inherit
+}
+
+.lesson-item{
+  width: 91vw;
+  height: 29vw;
+  margin: 4vw auto;
+  background-color: #ffffff;
+	box-shadow: 0vw 0vw 2vw 0vw 
+		rgba(0, 0, 0, 0.13);
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+.lesson-left{
+  width: 40%;
+  border-right: 1px solid #999999;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  display: inline-block;
+}
+
+.lesson-left .lesson-name{
+  font-size: 4vw;
+  width: 32vw;
+  color: #353535;
+  display: inline-block;
+  font-weight: normal;
+  height: 20vw;
+}
+
+.lesson-left .lesson-teacher{
+  font-size: 4vw;
+  display: inline-block;
+  color: #888888;
+}
+
+.lesson-left .lesson-type{
+  font-size: 3vw;
+  color: #cccccc;
+  display: inline-block;
+  margin-left: 6vw;
+}
+
+.lesson-right{
+  width: 50%;
+  padding: 3vw 3vw 3vw 0vw;
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.lesson-right .lesson-tag{
+  width: auto;
+  margin: 2vw 2vw 4vw 2vw;
+  padding: 0vw 2vw;
+  height: 6vw;
+  color: #fff;
+  font-size: 3vw;
+  text-align: center;
+  line-height: 6vw;
+  box-sizing: border-box;
+  background-color: #00cca8;
+  border-radius: 1vw;
+  display: inline-block;
+  
+}
