@@ -8,39 +8,39 @@
 </head>
 <body>
     <header class="header-container">
-        <div>爱选修</div>    
-        <span @click="lessonClick" v-bind:class="isLessonActive?'active':'no-active'">选课</span>
+        <div>爱选修 | 结课不发愁</div>    
+        <span @click="courseClick" v-bind:class="isCourseActive?'active':'no-active'">选课</span>
         <span class="my" @click="myClick" v-bind:class="isMyActive?'active':'no-active'">我</span>
         <img src="../../image/search.png" alt="">
 
         <!-- 选择课程类型 -->
-        <div class="choose-lesson-container">
-        <ul class="choose-lesson">
-            <li @click="chooseLesson(0)">
+        <div class="choose-course-container">
+        <ul class="choose-course">
+            <li @click="chooseCourse(0)">
                 <span >类别</span>
                 <transition name="rotate">
                     <span class="rotate-triangle" ></span>
                 </transition>
             </li>
-            <li @click="chooseLesson(1)">
+            <li @click="chooseCourse(1)">
                 <span >时间</span>
                 <transition name="rotate">
                     <span class="rotate-triangle" ></span>
                 </transition>
             </li>
-            <li @click="chooseLesson(2)">
+            <li @click="chooseCourse(2)">
                 <span >地点</span>
                 <transition name="rotate">
                     <span class="rotate-triangle" ></span>
                 </transition>
             </li>
-            <li @click="chooseLesson(3)">
+            <li @click="chooseCourse(3)">
                 <span>点名方式</span>
                 <transition name="rotate">
                     <span class="rotate-triangle" ></span>
                 </transition>
             </li>
-            <li @click="chooseLesson(4)">
+            <li @click="chooseCourse(4)">
                 <span>考核方式</span>
                 <transition name="rotate">
                     <span class="rotate-triangle" ></span>
@@ -55,15 +55,15 @@
     </header>
     <main id="main">
          <!-- 课程信息展示 -->
-         <div class="lessons" v-for="lesson in lessons" >
-             <div class="lesson-item">
-                 <div class="lesson-left">
-                     <span class="lesson-name">{{lesson.name}}</span>
-                     <span class="lesson-teacher">{{lesson.teacher}}</span>
-                     <span class="lesson-type">{{lesson.type}}</span>
+         <div class="courses" v-for="course in courses" >
+             <div class="course-item">
+                 <div class="course-left">
+                     <span class="course-name">{{course.name}}</span>
+                     <span class="course-teacher">{{course.teacher}}</span>
+                     <span class="course-type">{{course.type}}</span>
                  </div>
-                 <div class="lesson-right" >
-                     <span v-for="tag in lesson.tags" class="lesson-tag">{{tag}}</span>
+                 <div class="course-right" >
+                     <span v-for="tag in course.tags" class="course-tag">{{tag}}</span>
                  </div>
              </div>
          </div>

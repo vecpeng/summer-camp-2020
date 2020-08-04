@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./detail.css">
+</head>
+<body>
+    <div>爱选修</div>
+    <div id="main">
+        <div class="course-detail-container">
+          <div class="course-detail">
+            <div class="course-name">{{courseDetail.name}}</div>
+            <div class="course-info">
+              <span>
+                  <div>类别</div>
+                  <span>{{courseDetail.type}}</span>
+              </span>
+              <span>
+                <div>学分</div>
+                <span>{{courseDetail.credit}}</span>
+              </span>
+              <span>
+                <div>针对对象</div>
+                <span>{{courseDetail.object}}</span>
+              </span>
+            </div>
+            <div class="location-time-container">
+                <span class="location">开课地点</span>
+                <img src="../../image/location.png" alt="">
+                <span v-for="location in courseDetail.locations">{{location}}</span>
+                <span class="time">开课时间</span>
+                <img src="../../image/time.png" alt="">
+                <span v-for="time in courseDetail.times">{{time}}</span>
+            </div>
+            <div class="course-evaluate">
+                <div class="course-evaluate-title">课程评价</div>
+                <div class="course-evaluate-numbers">
+                    <div>
+                        <span class="course-evaluate-number">{{courseDetail.goodNum}}</span>
+                        <img src="../../image/good.png" alt="">
+                    </div>
+                    <div>
+                        <span class="course-evaluate-number">{{courseDetail.commonNum}}</span>
+                        <img src="../../image/common.png" alt="">
+                    </div>
+                    <div>
+                        <span class="course-evaluate-number">{{courseDetail.badNum}}</span>
+                        <img src="../../image/bad.png" alt="">
+                    </div>
+                </div>
+                <div class="course-evaluate-tags">
+                    <div class="course-evaluate-tag" v-for="tag in courseDetail.tags">{{tag}}</div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="comment-container">
+            <div class="comment-item" v-for="comment in comments">
+                <img class="comment-avatar" src="comment.avatar">
+                <div class="comment-username">{{comment.username}}</div>
+                <div class="comment-time">{{comment.time}}</div>
+                <div class="comment-content">{{comment.content}}</div>
+                <div class="comment-bottom">
+                    <img src="../../image/share.png" alt="">
+                    <div class="thumbup">
+                        <img src="../../image/thumbup.png" alt="">
+                        <span class="thumbup-number">{{comment.thumbupNum}}</span>
+                    </div>
+                    <div class="comment-reply">
+                        <img src="../../image/reply.png" alt="">
+                        <span class="comment-reply-number">{{comment.replyNum}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../vue.js"></script>
+    <script src="./detail.js"></script>
+</body>
+</html>

@@ -1,21 +1,21 @@
 let vm = new Vue({
     el:".header-container",
     data: {
-        isLessonActive:true,
+        isCourseActive:true,
         isMyActive:false,
         choicesDisplay:"none",
         choices:[]
     },
     methods:{
-        lessonClick:function(){
-            this.isLessonActive=true
+        CourseClick:function(){
+            this.isCourseActive=true
             this.isMyActive=false
         },
         myClick:function(){
             this.isMyActive=true
-            this.isLessonActive=false
+            this.isCourseActive=false
         },
-        chooseLesson:function(index){
+        chooseCourse:function(index){
             if(this.choicesDisplay =='')
             {
                 this.choicesDisplay="none"
@@ -29,7 +29,7 @@ let vm = new Vue({
 let main = new Vue({
     el:"#main",
     data: {
-        lessons:[{
+        courses:[{
             name:"中国历代王朝兴衰史及其启示",
             teacher:"汤黎",
             type:"历史与文化",
