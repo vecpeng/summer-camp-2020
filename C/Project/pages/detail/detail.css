@@ -1,87 +1,86 @@
-body{
-    margin:0;
-    padding:0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.course-detail{
-    background-image: linear-gradient(to right, #00cca8, #00c0cc);
-    height: 80vw;
+.course-detail {
+  background-image: linear-gradient(to right, #00cca8, #00c0cc);
+  height: 80vw;
 }
 
-.course-detail .course-name{
-    text-align: center;
-    font-size: 5vw;
-    color: #fff;
+.course-detail .course-name {
+  text-align: center;
+  font-size: 5vw;
+  color: #fff;
 }
 
-.course-detail .course-info{
-    height: 22vw;
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    color: #fff;
-    padding-top: 8vw;
+.course-detail .course-info {
+  height: 22vw;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #fff;
+  padding-top: 8vw;
 }
 
-.course-detail .course-info>span>div {
+.course-detail .course-info > span > div {
   margin-bottom: 5vw;
 }
 
-.course-detail .location-time-container{
-    width: 91vw;
-    margin: auto;
-	background-color: #fff;
-	box-shadow: 0vw 0vw 2vw 0vw 
-		rgba(0, 173, 204, 0.5);
-	border-radius: 1vw;
+.course-detail .location-time-container {
+  width: 91vw;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0vw 0vw 2vw 0vw rgba(0, 173, 204, 0.5);
+  border-radius: 1vw;
 }
 
-.course-detail .location,.time{
-    font-size: 4vw;
-    color: #b3b3b3;
+.course-detail .location,
+.time {
+  font-size: 4vw;
+  color: #b3b3b3;
 }
 
-.location-time-container span:nth-child(3){
-    margin: 0 8vw;
+.location-time-container span:nth-child(3) {
+  margin: 0 8vw;
 }
 
-.location-time-container span:nth-child(7){
-    margin: 0 16vw;
-    padding-top: 4vw;
-    display: inline-block
+.location-time-container span:nth-child(7) {
+  margin: 0 16vw;
+  padding-top: 4vw;
+  display: inline-block;
 }
 
-.course-evaluate{
-    width: 91vw;
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0vw 0vw 5vw 0vw 
-		rgba(0, 204, 168, 0.2);
-    border-radius: 1vw;
-    margin-top: 4vw;
+.course-evaluate {
+  width: 91vw;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0vw 0vw 5vw 0vw rgba(0, 204, 168, 0.2);
+  border-radius: 1vw;
+  margin-top: 4vw;
 }
 
-.course-evaluate-title{
-    text-align: center;
-    font-size: 5vw;
-    margin-bottom: 2vw;
+.course-evaluate-title {
+  text-align: center;
+  font-size: 5vw;
+  margin-bottom: 2vw;
 }
 
-.course-evaluate-numbers{
-    display: flex;
-    justify-content: space-around;
+.course-evaluate-numbers {
+  display: flex;
+  justify-content: space-around;
 }
 
-.course-evaluate-number{
-    display: block;
-    font-size: 5vw;
-    color: #353535;
-    margin-bottom: 2vw;
+.course-evaluate-number {
+  display: block;
+  font-size: 5vw;
+  color: #353535;
+  margin-bottom: 2vw;
 }
 
-.course-evaluate-tag{
-    width: auto;
+.course-evaluate-tag {
+  width: auto;
   margin: 2vw 2vw 6vw 10vw;
   padding: 0vw 2vw;
   height: 6vw;
@@ -95,37 +94,42 @@ body{
   display: inline-block;
 }
 
-.comment-container{
-    background-color: #fff;
-    margin-top: 20vw;
-    box-shadow: 0vw 0vw 3vw 0vw 
-		rgba(0, 204, 168, 0.2);
-    border-radius: 2vw;
+.comment-container {
+  background-color: #fff;
+  margin-top: 20vw;
+  box-shadow: 0vw 0vw 3vw 0vw rgba(0, 204, 168, 0.2);
+  border-radius: 2vw;
 }
 
-.comment-container .comment-item{
-    width: 100%;
-    height: 30vw;
+.comment-container .comment-item {
+  width: 100%;
 }
 
-.comment-item .comment-avatar{
-    width: 11vw;
-    height: 11vw;
-    border-radius: 50%;
-    float: left;
-    margin: 4vw;
+.comment-item .comment-avatar {
+  width: 11vw;
+  height: 11vw;
+  border-radius: 50%;
+  float: left;
+  margin: 4vw;
 }
 
-.comment-item .comment-username{
-    display: inline-block;
-    width: 80%;
-    margin-top: 4vw;
-    font-size: 4vw;
+.comment-item .comment-username {
+  display: inline-block;
+  width: 80%;
+  margin-top: 4vw;
+  font-size: 4vw;
 }
 
-.comment-item .comment-time{
-    display: inline-block;
-    width: 80%;
-    font-size: 2vw;
-    color: #888888;
+.comment-item .comment-time {
+  display: inline-block;
+  width: 80%;
+  font-size: 2vw;
+  color: #888888;
+}
+
+.comment-item .comment-content {
+  margin-left: 18vw;
+}
+
+.comment-item .comment-bottom {
 }

@@ -18,7 +18,7 @@ let vm = new Vue({
             avatar:"../../image/avatar.png",
             username:"匿名用户",
             time:"2020年8月4号",
-            comment:"这个老师不错这个老师不错这个老师不错",
+            content:"这个老师不错这个老师不错这个老师不错这个老师不错",
             thumbupNum:2,
             replyNum:2
         }]
