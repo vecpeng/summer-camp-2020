@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./evaluate.css">
+</head>
+<body>
+    <div id="container">
+        <div class="course-name">中国文化概况</div>
+        <div>
+            <span >点名</span>
+            <span class="radio-item">签到</span>
+            <span class="radio-item">点名</span>
+            <span class="radio-item">不点名不签到</span>
+        </div>
+        <div>
+            <span>考核</span>
+            <span class="radio-item" @click="chooseTest(0)">论文</span>
+            <span class="radio-item">考试</span>
+            <span class="radio-item">其他</span>
+        </div>
+        <div>
+            <span>作业</span>
+            <span class="radio-item">无作业</span>
+            <span class="radio-item">有作业</span>
+        </div>
+        <div>
+            <span>质量</span>
+            <span class="radio-item">很好</span>
+            <span class="radio-item">一般</span>
+            <span class="radio-item">差</span>
+            <span class="radio-item">没听</span>
+        </div>
+    </div>
+</body>
+</html>

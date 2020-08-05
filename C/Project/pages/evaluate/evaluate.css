@@ -1,0 +1,13 @@
+.radio-item{
+    color: #00cca8;
+    border: 1px solid #00cca8;
+    padding: 0.2vw 1.2vw;
+    text-align: center;
+    font-size: 3vw;
+    margin: 2vw;
+    display: inline-block
+}
+
+.container{
+    font-size: 3vw;
+}

@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./search.css" />
+  </head>
+  <body>
+      <div id="container">
+    <div class="search-input-container">
+      <header class="search-header">爱选修</header>
+      <input
+        class="search-input"
+        v-model="searchContent"
+        type="text"
+        placeholder="快速搜索课程名或教师名"
+      />
+      <span class="close-button" @click="closeSearch">取消</span>
+    </div>
+    <div class="search-title">热门搜索</div>
+    <div class="hot-search">
+      <div class="hot-search-item" v-for="item in hotSearch">
+        {{item}}
+      </div>
+    </div>
+    <div class="shadow"></div>
+    <div class="search-title">搜索历史</div>
+    <div class="search-history">
+      <div class="search-history-item" v-for="item in searchHistory">
+        <span>{{item}}</span>
+        <img @click="deleteHistory(index)" src="../../image/delete.png" alt="" />
+      </div>
+    </div>
+</div>
+    <script src="../../vue.js"></script>
+    <script src="./search.js"></script>
+  </body>
 </html>
