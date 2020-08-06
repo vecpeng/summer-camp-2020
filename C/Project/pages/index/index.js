@@ -7,13 +7,15 @@ let vm = new Vue({
         choices:[]
     },
     methods:{
-        CourseClick:function(){
+        courseClick:function(){
             this.isCourseActive=true
             this.isMyActive=false
+            window.location="http://localhost:3000/pages/index/index.html"
         },
         myClick:function(){
             this.isMyActive=true
             this.isCourseActive=false
+            window.location="http://localhost:3000/pages/my/my.html"
         },
         chooseCourse:function(index){
             if(this.choicesDisplay =='')

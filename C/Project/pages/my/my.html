@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./my.css">
 </head>
 <body>
     <header class="header-container">
         <div>爱选修</div>    
-        <span @click="lessonClick" v-bind:class="isLessonActive?'active':'no-active'">选课</span>
+        <span @click="courseClick" v-bind:class="isCourseActive?'active':'no-active'">选课</span>
         <span class="my" @click="myClick" v-bind:class="isMyActive?'active':'no-active'">我</span>
-        <img src="../../image/search.png" alt="">
+        <img src="../../image/search_index.png" alt="">
     </header>
+    <main id="main">
+        <img class="user-avatar" :src="userAvatar" alt="">
+        <div class="user-name">{{username}}</div>
+        <span @click="areadyEvaluateClick" v-bind:class="isEvaluate?'active':'no-active'">已评价课程</span>
+        <span class="inform" @click="informClick" v-bind:class="isInform?'active':'no-active'">消息</span>
+        <div class="comment-container">
+            <div class="comment-item" v-for="comment">
+                <span class="comment-content">{{comment.content}}</span>
+                <img src="../../course.png" alt="">
+                <span class="comment-course-name">{{comment.courseName}}</span>
+                <img src="../../teacher.png" alt="">
+                <span class="comment-teacher-name">{{comment.teacherName}}</span>
+            </div>
+        </div>
+    </main>
     <script src="../../vue.js"></script>
     <script src="./my.js"></script>
 </body>
