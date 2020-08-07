@@ -34,6 +34,11 @@ let main = new Vue({
         isEvaluate:true,
         isInform:false,
         userAvatar:"../../image/user_avatar.png",
-        username:"fsdfsf"
+        username:"fsdfsf",
+        comments:[{
+            content:"这是一条评论这是一条评论这是一条评论这是一条评论这是一条评论这是一条评论",
+            courseName:"精神情感活动的神经生物学",
+            teacherName:"张育红"
+        }]
     }
 })

@@ -103,6 +103,8 @@ body {
 
 .comment-container .comment-item {
   width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .comment-item .comment-avatar {
@@ -130,5 +132,26 @@ body {
 .comment-item .comment-content {
   margin-left: 18vw;
 }
+
+.comment-bottom{
+  float: right;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  color: #888888;
+  margin-right: 4vw;
+}
+
+.comment-bottom img{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5vw;
+}
+
+.comment-bottom .comment-share-img,.comment-reply-img{
+  width: 6vw;
+  height: 6vw;
+}
+
 
 

@@ -69,13 +69,36 @@
      text-align: center;
   }
 
-  .comment-content{
-    height: auto;
+  .comment-item{
+    width: 120vw;
+    height: 18vw;
+    position: relative;
     border-bottom: 1px solid #d9d9d9;
     overflow: scroll;
   }
 
-  .comment-course-name{
+  .comment-content{
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .comment-course-name,.comment-teacher-name{
     font-size: 4vw;
     color: #888888;
+    padding: 0 5vw;
   }
+
+  .delete-button{
+    width: 20vw;
+    height: inherit;
+    text-align: center;
+    line-height: 18vw;
+    color: #fff;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0
+  }
+
+  

@@ -19,12 +19,13 @@
         <span @click="areadyEvaluateClick" v-bind:class="isEvaluate?'active':'no-active'">已评价课程</span>
         <span class="inform" @click="informClick" v-bind:class="isInform?'active':'no-active'">消息</span>
         <div class="comment-container">
-            <div class="comment-item" v-for="comment">
-                <span class="comment-content">{{comment.content}}</span>
+            <div class="comment-item" v-for="comment in comments">
+                <div class="comment-content">{{comment.content}}</div>
                 <img src="../../course.png" alt="">
                 <span class="comment-course-name">{{comment.courseName}}</span>
                 <img src="../../teacher.png" alt="">
                 <span class="comment-teacher-name">{{comment.teacherName}}</span>
+                <span class="delete-button">删除</span>
             </div>
         </div>
     </main>

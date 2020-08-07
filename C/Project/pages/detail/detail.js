@@ -21,6 +21,20 @@ let vm = new Vue({
             content:"这个老师不错这个老师不错这个老师不错这个老师不错",
             thumbupNum:2,
             replyNum:2
+        },{
+            avatar:"../../image/avatar.png",
+            username:"匿名用户",
+            time:"2020年8月4号",
+            content:"这个老师不错这个老师不错这个老师不错这个老师不错",
+            thumbupNum:2,
+            replyNum:2
+        },{
+            avatar:"../../image/avatar.png",
+            username:"匿名用户",
+            time:"2020年8月4号",
+            content:"这个老师不错这个老师不错这个老师不错这个老师不错",
+            thumbupNum:2,
+            replyNum:2
         }]
     }
 })
