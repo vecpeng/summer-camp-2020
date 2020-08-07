@@ -4,45 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./comment.css">
+    <link rel="stylesheet" href="./comment.css" />
   </head>
   <body>
-      <div id="main">
-    <div class="comment-item">
-      <img class="comment-avatar" src="comment.avatar" />
-      <div class="comment-username">{{comment.username}}</div>
-      <div class="comment-time">{{comment.time}}</div>
-      <div class="comment-content">{{comment.content}}</div>
-      <div class="comment-bottom">
-        <img class="comment-share-img" src="../../image/share.png" alt="" />
-        <div class="thumbup">
-          <img src="../../image/thumbup.png" alt="" />
-          <span class="thumbup-number">{{comment.thumbupNum}}</span>
+    <div id="main">
+      <div class="comment-item">
+        <img class="comment-avatar" src="comment.avatar" />
+        <div class="comment-username">{{comment.username}}</div>
+        <div class="comment-time">{{comment.time}}</div>
+        <div class="comment-content">{{comment.content}}</div>
+        <div class="comment-bottom">
+          <img class="comment-share-img" src="../../image/share.png" alt="" />
+          <div class="thumbup">
+            <img src="../../image/thumbup.png" alt="" />
+            <span class="thumbup-number">{{comment.thumbupNum}}</span>
+          </div>
+          <div class="comment-reply">
+            <img class="comment-reply-img" src="../../image/reply.png" alt="" />
+            <span class="comment-reply-number">{{comment.replyNum}}</span>
+          </div>
         </div>
-        <div class="comment-reply">
-          <img class="comment-reply-img" src="../../image/reply.png" alt="" />
-          <span class="comment-reply-number">{{comment.replyNum}}</span>
+      </div>
+      <div class="reply-container">
+        <div
+          class="reply-item"
+          @click="reply(reply.username)"
+          v-for="reply in replys"
+        >
+          <img class="comment-avatar" src="reply.avatar" alt="" />
+          <div class="comment-username">{{reply.username}}</div>
+          <div class="comment-time">{{reply.time}}</div>
+          <div class="comment-content">{{reply.content}}</div>
+          <div class="reply" v-for="reply2reply in reply.replys">
+            <span class="reply2reply-name">{{reply2reply.name}}</span>
+            <span>回复</span>
+            <span class="reply2reply-replyto">{{reply2reply.replyto}}</span>
+            <span>{{reply2reply.content}}</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="reply-container">
-        <div class="reply-item" @click="reply(reply.username)" v-for="reply in replys">
-            <img class="comment-avatar" src="reply.avatar" alt="">
-            <div class="comment-username">{{reply.username}}</div>
-      <div class="comment-time">{{reply.time}}</div>
-      <div class="comment-content">{{reply.content}}</div>
-      <div class="reply" v-for="reply2reply in reply.replys">
-          <span class="reply2reply-name">{{reply2reply.name}}</span>
-          <span>回复</span>
-          <span class="reply2reply-replyto">{{reply2reply.replyto}}</span>
-          <span>{{reply2reply.content}}</span>
-      </div>
-        </div>
-    </div>
-</div>
-<input id="comment-input" type="text" placeholder="说点什么吧" v-model="commentInput">
-<label for="comment-input">发送</label>
-<script src="../../vue.js"></script>
-<script src="./comment.js"></script>
+    <input
+      id="comment-input"
+      type="text"
+      placeholder="说点什么吧"
+      v-model="commentInput"
+    />
+    <label for="comment-input">发送</label>
+    <script src="../../vue.js"></script>
+    <script src="./comment.js"></script>
   </body>
 </html>
