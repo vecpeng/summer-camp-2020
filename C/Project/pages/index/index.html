@@ -20,55 +20,54 @@
         v-bind:class="isMyActive?'active':'no-active'"
         >我</span
       >
-      <img src="../../image/search_index.png" alt="" />
+      <img @click="navigateToSearch" src="../../image/search_index.png" alt="" />
 
       <!-- 选择课程类型 -->
       <div class="choose-course-container">
         <ul class="choose-course">
-          <li @click="chooseCourse(0)">
+          <li v-bind:class="isClick[0]?'is-click':''"  @click="chooseCourse(0)">
             <span>类别</span>
             <transition name="rotate">
               <span class="rotate-triangle"></span>
             </transition>
           </li>
-          <li @click="chooseCourse(1)">
+          <li v-bind:class="isClick[1]?'is-click':''"  @click="chooseCourse(1)">
             <span>时间</span>
             <transition name="rotate">
               <span class="rotate-triangle"></span>
             </transition>
           </li>
-          <li @click="chooseCourse(2)">
+          <li v-bind:class="isClick[2]?'is-click':''"  @click="chooseCourse(2)">
             <span>地点</span>
             <transition name="rotate">
               <span class="rotate-triangle"></span>
             </transition>
           </li>
-          <li @click="chooseCourse(3)">
+          <li v-bind:class="isClick[3]?'is-click':''"  @click="chooseCourse(3)">
             <span>点名方式</span>
             <transition name="rotate">
               <span class="rotate-triangle"></span>
             </transition>
           </li>
-          <li @click="chooseCourse(4)">
+          <li v-bind:class="isClick[4]?'is-click':''"  @click="chooseCourse(4)">
             <span>考核方式</span>
             <transition name="rotate">
               <span class="rotate-triangle"></span>
             </transition>
           </li>
         </ul>
-      </div>
-      <div
+        <div
         class="choices"
         v-bind:style="{display:choicesDisplay}"
-        v-for="choice in choices"
       >
-        <span class="choice" @click="choose(index)">{{choice}}</span>
+        <span class="choice"  v-bind:class="chooseColor[index]?'choose-color':''" @click="choose(index)" v-for="(choice, index) in choices">{{choice}}</span>
+      </div>
       </div>
       <!-- 选择课程类型end-->
     </header>
     <main id="main">
       <!-- 课程信息展示 -->
-      <div class="courses" v-for="course in courses">
+      <div class="courses" v-for="course in courses"  @click="navigateToDetail">
         <div class="course-item">
           <div class="course-left">
             <span class="course-name">{{course.name}}</span>

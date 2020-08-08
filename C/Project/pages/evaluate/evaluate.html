@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./evaluate.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./evaluate.css" />
+  </head>
+  <body>
     <div id="container">
-        <div class="course-name">中国文化概况</div>
-        <div>
-            <span >点名</span>
-            <span class="radio-item">签到</span>
-            <span class="radio-item">点名</span>
-            <span class="radio-item">不点名不签到</span>
-        </div>
-        <div>
-            <span>考核</span>
-            <span class="radio-item" @click="chooseTest(0)">论文</span>
-            <span class="radio-item">考试</span>
-            <span class="radio-item">其他</span>
-        </div>
-        <div>
-            <span>作业</span>
-            <span class="radio-item">无作业</span>
-            <span class="radio-item">有作业</span>
-        </div>
-        <div>
-            <span>质量</span>
-            <span class="radio-item">很好</span>
-            <span class="radio-item">一般</span>
-            <span class="radio-item">差</span>
-            <span class="radio-item">没听</span>
-        </div>
+      <div class="course-name">中国文化概况</div>
+      <div>
+        <span>点名</span>
+        <span class="radio-item" v-bind:class="chooseSignin[0]?'radio-item-choose':''" @click="chooseSigninClick(0)">签到</span>
+        <span class="radio-item" v-bind:class="chooseSignin[1]?'radio-item-choose':''" @click="chooseSigninClick(1)">点名</span>
+        <span class="radio-item" v-bind:class="chooseSignin[2]?'radio-item-choose':''" @click="chooseSigninClick(2)">不点名不签到</span>
+      </div>
+      <div>
+        <span>考核</span>
+        <span class="radio-item" v-bind:class="chooseTest[0]?'radio-item-choose':''" @click="chooseTestClick(0)">论文</span>
+        <span class="radio-item" v-bind:class="chooseTest[1]?'radio-item-choose':''" @click="chooseTestClick(1)">考试</span>
+        <span class="radio-item" v-bind:class="chooseTest[2]?'radio-item-choose':''" @click="chooseTestClick(2)">其他</span>
+      </div>
+      <div>
+        <span>作业</span>
+        <span class="radio-item">无作业</span>
+        <span class="radio-item">有作业</span>
+      </div>
+      <div>
+        <span>质量</span>
+        <span class="radio-item">很好</span>
+        <span class="radio-item">一般</span>
+        <span class="radio-item">差</span>
+        <span class="radio-item">没听</span>
+      </div>
     </div>
-</body>
+    <textarea
+      class="evaluate-input-text"
+      type="text"
+      placeholder="这里写评论内容...(不多于160字)"
+    ></textarea>
+    <input id="evaluate-input-file" class="evaluate-input-file" type="file" />
+    <label class="file-label" for="evaluate-input-file">+</label>
+    <input id="anonymous" type="checkbox">
+    <label for="anonymous"></label>
+    <input id="final" type="checkbox">
+    <label for="final"></label>
+    <script src="../../vue.js"></script>
+    <script src="./evaluate.js"></script>
+  </body>
 </html>

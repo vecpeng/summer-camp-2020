@@ -1,3 +1,8 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .comment-item {
   width: 100%;
   overflow: hidden;
@@ -57,7 +62,35 @@
 .reply {
   margin-left: 20vw;
 }
+
 .reply .reply2reply-name,
 .reply2reply-replyto {
   color: #00adcc;
+}
+
+#comment-input{
+  position: fixed;
+  height: 10vw;
+  width: 100vw;
+  background-color: #fff;
+  outline: none;
+  bottom: 0;
+  border:none;
+  border-top:1px solid #b2b2b2
+}
+
+.comment-input-container{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.submit-comment{
+  color: #00adcc;
+  position: fixed;
+  right: 3vw;
+  bottom: 0;
+  right: 2vw;
+  height: 10vw;
+  line-height: 10vw;
 }

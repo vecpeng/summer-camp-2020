@@ -36,5 +36,10 @@ let vm = new Vue({
             thumbupNum:2,
             replyNum:2
         }]
+    },
+    methods:{
+        navigateToComment:function(){
+            window.location='../comment/comment.html'
+        }
     }
 })

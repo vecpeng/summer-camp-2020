@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="main">
-      <div class="comment-item">
+      <div class="comment-item" >
         <img class="comment-avatar" src="comment.avatar" />
         <div class="comment-username">{{comment.username}}</div>
         <div class="comment-time">{{comment.time}}</div>
@@ -44,13 +44,15 @@
         </div>
       </div>
     </div>
+    <div class="comment-input-container">
     <input
       id="comment-input"
       type="text"
       placeholder="说点什么吧"
       v-model="commentInput"
     />
-    <label for="comment-input">发送</label>
+    <label for="comment-input" class="submit-comment">发送</label>
+  </div>
     <script src="../../vue.js"></script>
     <script src="./comment.js"></script>
   </body>

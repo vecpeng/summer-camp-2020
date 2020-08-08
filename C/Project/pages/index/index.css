@@ -65,6 +65,7 @@ body {
 .choose-course-container {
   overflow: scroll;
   width: 100vw;
+  position: relative;
 }
 
 .choose-course {
@@ -170,3 +171,41 @@ body {
   border-radius: 1vw;
   display: inline-block;
 }
+
+.choose-course .is-click{
+  color: #00cca8;
+}
+
+.choose-course .is-click .rotate-triangle::after {
+  position: absolute;
+  content: ">";
+  transform: rotate(270deg);
+  left: 0;
+  top: 0;
+  font-weight: 1;
+  color: inherit;
+}
+
+.choices{
+  background-color: #eeeeee;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  left: 0;
+}
+
+.choices .choice{
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 0.2vw;
+  height: 8vw;
+  line-height: 8vw;
+  padding: 0 2vw;
+  color: #b2b2b2;
+  margin: 2vw 3vw;
+}
+
+.choices .choose-color{
+  color: #00cca8
+}
+

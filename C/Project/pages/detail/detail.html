@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="comment-container">
-        <div class="comment-item" v-for="comment in comments">
+        <div class="comment-item" v-for="comment in comments" @click="navigateToComment">
           <img class="comment-avatar" src="comment.avatar" />
           <div class="comment-username">{{comment.username}}</div>
           <div class="comment-time">{{comment.time}}</div>

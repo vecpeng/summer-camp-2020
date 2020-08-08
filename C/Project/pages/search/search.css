@@ -24,6 +24,7 @@ body{
     font-size: 4.2vw;
     color: #d9d9d9;
     margin-left: 2vw;
+    outline: none;
 }
 
 .search-input-container{

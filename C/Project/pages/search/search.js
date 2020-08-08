@@ -7,6 +7,9 @@ new Vue({
     methods:{
         deleteHistory:function(index){
            this.searchHistory = this.searchHistory.splice(index,1)
+        },
+        closeSearch:function(){
+            window.location="../index/index.html"
         }
     }
 })

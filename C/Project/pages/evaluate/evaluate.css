@@ -1,13 +1,43 @@
-.radio-item{
-    color: #00cca8;
-    border: 1px solid #00cca8;
-    padding: 0.2vw 1.2vw;
-    text-align: center;
-    font-size: 3vw;
-    margin: 2vw;
-    display: inline-block
+.radio-item {
+  color: #00cca8;
+  border: 1px solid #00cca8;
+  padding: 0.2vw 1.2vw;
+  text-align: center;
+  font-size: 3vw;
+  margin: 2vw;
+  display: inline-block;
 }
 
-.container{
-    font-size: 3vw;
+.container {
+  font-size: 3vw;
 }
+
+.evaluate-input-text {
+  height: 60vw;
+  width: 100vw;
+  border: 1px solid #b2b2b2;
+  outline: none;
+}
+
+.evaluate-input-file {
+  width: 30vw;
+  height: 30vw;
+  display: none;
+}
+
+.file-label {
+  width: 27vw;
+  height: 27vw;
+  background-color: #f5f5f5;
+  color: #cccccc;
+  display: inline-block;
+  line-height: 27vw;
+  text-align: center;
+  position: relative;
+  bottom: 30vw;
+}
+
+.radio-item-choose{
+    background-color: #00cca8;
+    color: #fff
+  }
